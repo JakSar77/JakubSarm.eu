@@ -1,0 +1,187 @@
+
+@import '../node_modules/mdbootstrap/css/mdb.css';
+
+html, body {
+    background-color: #fff;
+}
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+section#main {
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/background.webp');
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    h1 {
+        color: #fff;
+        margin: 0;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 56px;
+        font-family: "Raleway", sans-serif;
+    }
+    span {
+        color: #c3473c;
+        letter-spacing: 1px;
+        margin: 15px 0 0 0;
+        font-size: 26px;
+        font-family: "Poppins", sans-serif;
+    }
+    .socials {
+        ul.social-network {
+        	list-style: none;
+        	display: inline;
+        	margin-left:0 !important;
+        	padding: 0;
+        }
+        ul.social-network li {
+        	display: inline;
+        	margin: 0 5px;
+        }
+        .social-network a.icoLinked:hover {
+        	background-color: #2867B2;
+        }
+        .social-network a.icoFacebook:hover {
+        	background-color:#3B5998;
+        }
+        .social-network a.icoInstagram:hover {
+        	background-color:#e1306c;
+        }
+        .social-network a.icoLinked:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoInstagram:hover i, .social-network a.icoTwitter:hover i {
+        	color:#fff;
+        }
+        a.socialIcon:hover, .socialHoverClass {
+        	color:#44BCDD;
+        }
+        .social-circle li a {
+        	display:inline-block;
+        	position:relative;
+        	margin:0 auto 0 auto;
+        	-moz-border-radius:50%;
+        	-webkit-border-radius:50%;
+        	border-radius:50%;
+        	text-align:center;
+        	width: 50px;
+        	height: 50px;
+        	font-size:20px;
+        }
+        .social-circle li i {
+        	margin:0;
+        	line-height:50px;
+        	text-align: center;
+        }
+
+        .social-circle li a:hover i, .triggeredHover {
+        	-moz-transform: rotate(360deg);
+        	-webkit-transform: rotate(360deg);
+        	-ms--transform: rotate(360deg);
+        	transform: rotate(360deg);
+        	-webkit-transition: all 0.2s;
+        	-moz-transition: all 0.2s;
+        	-o-transition: all 0.2s;
+        	-ms-transition: all 0.2s;
+        	transition: all 0.2s;
+        }
+        .social-circle i {
+        	color: #fff;
+        	-webkit-transition: all 0.8s;
+        	-moz-transition: all 0.8s;
+        	-o-transition: all 0.8s;
+        	-ms-transition: all 0.8s;
+        	transition: all 0.8s;
+        }
+    }
+    #clouds {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+.page-title {
+    margin-bottom: 2.2rem;
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+section#about {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 75vh;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 16px;
+                margin-right: 5px;
+                color: #c3473c;
+                line-height: 0;
+            }
+            b {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+section#reference {
+    width: 100%;
+    min-height: 75vh;
+    mdb-carousel-item {
+        min-height: 50vh;
+        img {
+            margin-bottom: 1.2rem;
+        }
+    }
+}
+
+section#zaver {
+    width: 100%;
+    min-height: 20vh;
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0 0 15px 0;
+    }
+    p {
+        font-size: 15px;
+        font-style: italic;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+}
+
+a {
+    color: #c3473c
+}
+a:hover {
+    color: #cf6c63;
+}
+
+footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
