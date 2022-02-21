@@ -240,45 +240,12 @@ section#zaver {
 section#projekty {
     width: 100%;
     min-height: 20vh;
-    .accordian {
-    	overflow: hidden;
-    }
 
-    .accordian ul {
-    	width: 1200px;
+    .card {
+        transition: all 0.2s ease;
     }
-
-    .accordian li {
-    	position: relative;
-    	display: block;
-    	width: 160px;
-    	float: left;
-    
-    	border-left: 1px solid #888;
-    
-    	transition: all 0.5s;
-    	-webkit-transition: all 0.5s;
-    	-moz-transition: all 0.5s;
-    }
-
-    .accordian ul:hover li {width: 40px;}
-    .accordian ul li:hover {width: 640px;}
-    .accordian li img {
-    	display: block;
-    }
-
-    .image_title {
-    	background: rgba(0, 0, 0, 0.5);
-    	position: absolute;
-    	left: 0; bottom: 0;	
-        width: 1280px;	
-    }
-    .image_title a {
-    	display: block;
-    	color: #fff;
-    	text-decoration: none;
-    	padding: 20px;
-    	font-size: 16px;
+    .card:hover {
+        transform: scale(1.1);
     }
 
 }
