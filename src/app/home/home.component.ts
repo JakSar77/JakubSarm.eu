@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
         "Teoreticky je teorie a praxe totéž. V praxi tomu tak není.",
         "Dobrý návrh: hodnota roste rychleji než náklady.",
         "Chodit po vodě a psát software podle specifikace je snazší, pokud je obojí zmražené.",
-        "Programování je dnes závod mezi softwarovými vývojáři, co se snaží vytvořit větší a lepší blbuvzdorné programy,<br>a vesmírem, který se snaží vytvořit větší a lepší blby. Zatím Vesmír vítězí.",
+        "Programování je dnes závod mezi softwarovými vývojáři,<br>co se snaží vytvořit větší a lepší blbuvzdorné programy,<br>a vesmírem, který se snaží vytvořit větší a lepší blby. Zatím Vesmír vítězí.",
         "Ti, co nechápou Linux, jsou odsouzeni k tomu, aby jej vynalezli znovu.",
     ];
 
@@ -45,7 +45,14 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        window.onblur   = function(){
+            document.title  = "Nezapomněli jste na mě? | Jakub Šarm";
+        };
+        window.onfocus   = function(){
+            document.title  = "Jakub Šarm - Programátor";
+        };
     }
+
 
 
 }
