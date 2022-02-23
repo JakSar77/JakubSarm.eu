@@ -1,6 +1,6 @@
 <header id="header" class="d-flex flex-column justify-content-center slideFromLeft">
 
-    <nav id="navbar" class="navbar nav-menu" (scroll)="scrollHandler($event)">
+    <nav id="navbar" class="navbar nav-menu">
         <ul>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)" ><i class="fa fa-home"></i> <span>Domů</span></a></li>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)" ><i class="fa fa-book"></i> <span>O mně</span></a></li>
@@ -11,7 +11,7 @@
 
 </header>
 
-<section class="d-flex flex-column justify-content-center items-align-center" #main id="main">
+<section class="d-flex flex-column justify-content-center items-align-center" #main id="main" (scroll)="scrollHandler($event)">
     <div class="container aos-init aos-animate slide-right">
         <div class="row justify-content-center items-align-center">
             <div class="col-md-10">

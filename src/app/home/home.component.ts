@@ -59,9 +59,13 @@ export class HomeComponent implements OnInit {
         link.scrollIntoView();
     }
 
-    @HostListener('window:scroll', ['$event']) 
-    scrollHandler(event:any) {
-        console.debug("Scroll Event");
+    getYPosition(e: Event): number {
+        return (e.target as Element).scrollTop;
+
     }
 
+    @HostListener('window:scroll', ['$event']) 
+    scrollHandler(event:any) {
+        console.log(this.getYPosition(event));
+    }
 }
