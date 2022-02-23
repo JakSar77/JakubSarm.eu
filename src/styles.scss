@@ -1,7 +1,7 @@
+@import "../node_modules/mdbootstrap/css/mdb.css";
 
-@import '../node_modules/mdbootstrap/css/mdb.css';
-
-html, body {
+html,
+body {
     background-color: #fff;
 }
 body {
@@ -9,50 +9,141 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
-
-nav {
+header#header {
     position: fixed;
-    z-index: 1000;
-    height: 100%;
-    right: 0;
     top: 0;
+    left: 0;
     bottom: 0;
-    justify-content: center;
-    ul {
-        padding: auto;
-        list-style: none;
-        li {
-            margin-right: 2rem;
-            margin-bottom: 1rem;
-            background-color: #c3473c;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            a {
-                color: #fff;
-            }
-        }
-        li:first-child {
-            margin-top: 10rem;
-        }
-        li:hover {
-            background-color: #fff;
-            color: #c3473c;
-            a {
-                color: #c3473c;
-            }
-        }
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 15px;
+    overflow-y: auto;
+    animation: slideFromLeft 2s forwards;
+}
+@media (max-width: 992px) {
+    #header {
+        width: 300px;
+        background: #fff;
+        border-right: 1px solid #e6e9ec;
+        left: -300px;
     }
+}
+
+.nav-menu {
+    padding: 0;
+    display: block;
+    box-shadow: none;
+}
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+}
+.nav-menu a,
+.nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #45505b;
+    padding: 10px 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+    border-radius: 50px;
+    background: #f2f3f5;
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 20px;
+}
+.nav-menu a span,
+.nav-menu a:focus span {
+    padding: 0 5px 0 7px;
+    color: #45505b;
+}
+@media (min-width: 992px) {
+    .nav-menu a,
+    .nav-menu a:focus {
+        width: 56px;
+    }
+    .nav-menu a span,
+    .nav-menu a:focus span {
+        display: none;
+        color: #fff;
+    }
+}
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+    color: #fff !important;
+    background: #c3473c;
+}
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover > a span {
+    color: #fff !important;
+}
+.nav-menu a:hover,
+.nav-menu li:hover > a {
+    width: 100%;
+    color: #fff !important;
+}
+.nav-menu a:hover span,
+.nav-menu li:hover > a span {
+    display: block;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 0;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px;
+}
+.mobile-nav-toggle i {
+    color: #45505b;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+.mobile-nav-active #header {
+    left: 0;
+}
+.mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    background-color: #c3473c;
 }
 
 section#main {
     width: 100%;
     height: 100vh;
-    background: url('./assets/background.webp');
+    background: url("./assets/background.webp");
     background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    .slide-right {
+        animation: slideFromRight 1s forwards;
+    }
     h1 {
         color: #fff;
         margin: 0;
@@ -70,66 +161,71 @@ section#main {
     }
     .socials {
         ul.social-network {
-        	list-style: none;
-        	display: inline;
-        	margin-left:0 !important;
-        	padding: 0;
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
         }
         ul.social-network li {
-        	display: inline;
-        	margin: 0 5px;
+            display: inline;
+            margin: 0 5px;
         }
         .social-network a.icoLinked:hover {
-        	background-color: #2867B2;
+            background-color: #2867b2;
         }
         .social-network a.icoFacebook:hover {
-        	background-color:#3B5998;
+            background-color: #3b5998;
         }
         .social-network a.icoInstagram:hover {
-        	background-color:#e1306c;
+            background-color: #e1306c;
         }
-        .social-network a.icoLinked:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoInstagram:hover i, .social-network a.icoTwitter:hover i {
-        	color:#fff;
+        .social-network a.icoLinked:hover i,
+        .social-network a.icoFacebook:hover i,
+        .social-network a.icoInstagram:hover i,
+        .social-network a.icoTwitter:hover i {
+            color: #fff;
         }
-        a.socialIcon:hover, .socialHoverClass {
-        	color:#44BCDD;
+        a.socialIcon:hover,
+        .socialHoverClass {
+            color: #44bcdd;
         }
         .social-circle li a {
-        	display:inline-block;
-        	position:relative;
-        	margin:0 auto 0 auto;
-        	-moz-border-radius:50%;
-        	-webkit-border-radius:50%;
-        	border-radius:50%;
-        	text-align:center;
-        	width: 50px;
-        	height: 50px;
-        	font-size:20px;
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
         }
         .social-circle li i {
-        	margin:0;
-        	line-height:50px;
-        	text-align: center;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
         }
 
-        .social-circle li a:hover i, .triggeredHover {
-        	-moz-transform: rotate(360deg);
-        	-webkit-transform: rotate(360deg);
-        	-ms--transform: rotate(360deg);
-        	transform: rotate(360deg);
-        	-webkit-transition: all 0.2s;
-        	-moz-transition: all 0.2s;
-        	-o-transition: all 0.2s;
-        	-ms-transition: all 0.2s;
-        	transition: all 0.2s;
+        .social-circle li a:hover i,
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
         }
         .social-circle i {
-        	color: #fff;
-        	-webkit-transition: all 0.8s;
-        	-moz-transition: all 0.8s;
-        	-o-transition: all 0.8s;
-        	-ms-transition: all 0.8s;
-        	transition: all 0.8s;
+            color: #fff;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
         }
     }
     #clouds {
@@ -210,69 +306,74 @@ section#zaver {
         padding: 0;
         margin: 0 0 15px 0;
     }
-    
+
     .socials {
         ul.social-network {
-        	list-style: none;
-        	display: inline;
-        	margin-left:0 !important;
-        	padding: 0;
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
         }
         ul.social-network li {
-        	display: inline;
-        	margin: 0 5px;
+            display: inline;
+            margin: 0 5px;
         }
         .social-network a.icoLinked:hover {
-        	background-color: #2867B2;
+            background-color: #2867b2;
         }
         .social-network a.icoFacebook:hover {
-        	background-color:#3B5998;
+            background-color: #3b5998;
         }
         .social-network a.icoInstagram:hover {
-        	background-color:#e1306c;
+            background-color: #e1306c;
         }
-        .social-network a.icoLinked:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoInstagram:hover i, .social-network a.icoTwitter:hover i {
-        	color:#fff;
+        .social-network a.icoLinked:hover i,
+        .social-network a.icoFacebook:hover i,
+        .social-network a.icoInstagram:hover i,
+        .social-network a.icoTwitter:hover i {
+            color: #fff;
         }
-        a.socialIcon:hover, .socialHoverClass {
-        	color:#44BCDD;
+        a.socialIcon:hover,
+        .socialHoverClass {
+            color: #44bcdd;
         }
         .social-circle li a {
-        	display:inline-block;
-        	position:relative;
-        	margin:0 auto 0 auto;
-        	-moz-border-radius:50%;
-        	-webkit-border-radius:50%;
-        	border-radius:50%;
-        	text-align:center;
-        	width: 50px;
-        	height: 50px;
-        	font-size:20px;
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
         }
         .social-circle li i {
-        	margin:0;
-        	line-height:50px;
-        	text-align: center;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
         }
 
-        .social-circle li a:hover i, .triggeredHover {
-        	-moz-transform: rotate(360deg);
-        	-webkit-transform: rotate(360deg);
-        	-ms--transform: rotate(360deg);
-        	transform: rotate(360deg);
-        	-webkit-transition: all 0.2s;
-        	-moz-transition: all 0.2s;
-        	-o-transition: all 0.2s;
-        	-ms-transition: all 0.2s;
-        	transition: all 0.2s;
+        .social-circle li a:hover i,
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
         }
         .social-circle i {
-        	color: var(--bs-body-color);;
-        	-webkit-transition: all 0.8s;
-        	-moz-transition: all 0.8s;
-        	-o-transition: all 0.8s;
-        	-ms-transition: all 0.8s;
-        	transition: all 0.8s;
+            color: var(--bs-body-color);
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
         }
     }
 }
@@ -282,16 +383,15 @@ section#projekty {
     min-height: 20vh;
 
     .card {
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
     }
     .card:hover {
         transform: scale(1.05);
     }
-
 }
 
 a {
-    color: #c3473c
+    color: #c3473c;
 }
 a:hover {
     color: #cf6c63;
@@ -302,4 +402,23 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+
+
+@keyframes slideFromLeft {
+    0% { left: -100%; }
+    100% { left: 0; }
+}
+@keyframes slideFromRight {
+    0% { right: -100%; }
+    100% { right: 0; }
+}
+@keyframes slideFromBottom {
+    0% { bottom: -100%; }
+    100% { bottom: 0; }
+}
+@keyframes slideFromTop {
+    0% { top: -100%; }
+    100% { top: 0; }
 }

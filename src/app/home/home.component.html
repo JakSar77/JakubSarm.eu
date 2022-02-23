@@ -1,36 +1,36 @@
-<nav>
-    <ul>
-        <li>
-            <a href="#main"><i class="fa fa-house"></i> Domů</a>
-        </li>
-        <li>
-            <a href="#about"><i class="fa fa-book"></i> O mně</a>
-        </li>
-        <li>
-            <a href="#projekty"><i class="fa fa-briefcase"></i> Projekty</a>
-        </li>
-        <li>
-            <a href="#reference"><i class="fa fa-users"></i> Reference</a>
-        </li>
-    </ul>
-</nav>
+<header id="header" class="d-flex flex-column justify-content-center slideFromLeft">
 
-<section class="d-flex flex-column justify-content-center" id="main">
-    <div class="container aos-init aos-animate">
-        <h1>Jakub Šarm</h1>
-        <span [innerHTML]="citat"></span>
-        <br><br>
-        <div class="socials">
-            <ul class="social-network social-circle">
-                <li><a href="" target="_blank" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="" target="_blank" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="" target="_blank" class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
+    <nav id="navbar" class="navbar nav-menu" (scroll)="scrollHandler($event)">
+        <ul>
+            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)" ><i class="fa fa-home"></i> <span>Domů</span></a></li>
+            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)" ><i class="fa fa-book"></i> <span>O mně</span></a></li>
+            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === projekty}" (click)="menu(projekty)" ><i class="fas fa-briefcase"></i> <span>Projekty</span></a></li>
+            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === reference}" (click)="menu(reference)" ><i class="fa fa-users"></i> <span>Reference</span></a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="d-flex flex-column justify-content-center items-align-center" #main id="main">
+    <div class="container aos-init aos-animate slide-right">
+        <div class="row justify-content-center items-align-center">
+            <div class="col-md-10">
+                <h1>Jakub Šarm</h1>
+                <span [innerHTML]="citat"></span>
+                <br><br>
+                <div class="socials">
+                    <ul class="social-network social-circle">
+                        <li><a href="" target="_blank" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="" target="_blank" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="" target="_blank" class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <img src="../../assets/faded-clouds-bottom.svg" id="clouds" alt="">
 </section>
-<section class="d-flex flex-column justify-content-center" id="about">
+<section class="d-flex flex-column justify-content-center" #about id="about">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center page-title">
@@ -41,7 +41,7 @@
             <div class="col-md-4">
                 <img src="../../assets/me.webp" class="rounded profil-img" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 aboutText">
                 <h2>
                     Web developer.
                 </h2>
@@ -65,7 +65,7 @@
                                 <i class="fa fa-chevron-right"></i><b>Telefon:</b> +420 775 567 240
                             </li>
                             <li>
-                                <i class="fa fa-chevron-right"></i><b>E-Mail:</b> Sarm<i class="fa fa-at"></i>jakubsarm.eu
+                                <i class="fa fa-chevron-right"></i><b>E-Mail:</b> Sarm<i class="fa fa-at" style="margin-right: 0;"></i>jakubsarm.eu
                             </li>
                             <li>
                                 <i class="fa fa-chevron-right"></i><b>Adresa:</b> Okrouhlá 35, 35002 Okrouhlá
@@ -80,7 +80,7 @@
         </div>
     </div>
 </section>
-<section class="d-flex flex-column justify-content-center" id="projekty">
+<section class="d-flex flex-column justify-content-center" #projekty id="projekty">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center page-title">
@@ -124,7 +124,7 @@
                         <p class="card-text">
                             Webová stránka s informacemi o minecraft serveru a vlastním banlist systémem. Web je zaměřený spíše na design.
                         </p>
-                        <a href="https://playinright.cz/" class="card-link">PlayInRight.cz</a>
+                        <a href="https://www.playinright.cz/" class="card-link">PlayInRight.cz</a>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
         </div>
     </div>
 </section>
-<section class="d-flex flex-column justify-content-center" id="reference">
+<section class="d-flex flex-column justify-content-center" #reference id="reference">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center page-title">
