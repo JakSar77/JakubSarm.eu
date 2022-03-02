@@ -53,14 +53,19 @@ export class HomeComponent implements OnInit {
             document.title = 'Jakub Šarm - Programátor';
         };
         
-        const select = (el:any, all = false) => {
-            el = el.trim()
-            if (all) {
-                return [document.querySelectorAll(el)]
-            } else {
-                return document.querySelector(el)
-            }
-        }
+        $(window).scroll(() => {
+            var winHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            
+            var elemHeight = $("#main").height();
+            var elementTop = $("#main").position().top; 
+             
+            if (elementTop < scrollTop + winHeight && scrollTop < elementTop + elemHeight)
+                $("nav-link").addclass("active");
+            else
+                $("nav-link").removeClass("active");
+            
+        });
 
     }
 
@@ -90,11 +95,10 @@ export class HomeComponent implements OnInit {
 
     getYPosition(e: Event): number {
         return (e.target as Element).scrollTop;
-
     }
 
     @HostListener('window:scroll', ['$event']) 
     scrollHandler(event:any) {
-        console.log(this.getYPosition(event));
     }
+
 }
