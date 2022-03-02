@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
+declare var $: any;
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -50,6 +52,33 @@ export class HomeComponent implements OnInit {
         window.onfocus = function () {
             document.title = 'Jakub Šarm - Programátor';
         };
+        
+        const select = (el:any, all = false) => {
+            el = el.trim()
+            if (all) {
+                return [document.querySelectorAll(el)]
+            } else {
+                return document.querySelector(el)
+            }
+        }
+
+    }
+
+    public mobileMenuState: boolean    = false;
+    mobileMenu(){
+        const navbar    = document.getElementById('mobile-nav');
+        const body      = document.body;
+        if(this.mobileMenuState){
+            this.mobileMenuState    = false;
+            body!.classList.toggle('mobile-nav-active')
+            navbar!.classList.toggle('fa-list')
+            navbar!.classList.toggle('fa-times')
+        }else{
+            this.mobileMenuState    = true;
+            body!.classList.toggle('mobile-nav-active')
+            navbar!.classList.toggle('fa-list')
+            navbar!.classList.toggle('fa-times')
+        }
     }
 
 
