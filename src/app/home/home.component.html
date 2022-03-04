@@ -3,7 +3,7 @@
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
-    <nav id="navbar" class="navbar nav-menu">
+    <nav id="navbar" class="navbar nav-menu sh">
         <ul>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)" ><i class="fa fa-home"></i> <span>Domů</span></a></li>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)" ><i class="fa fa-book"></i> <span>O mně</span></a></li>
@@ -17,7 +17,7 @@
 <section class="d-flex flex-column justify-content-center items-align-center" #main id="main" (scroll)="scrollHandler($event)">
     <div class="container aos-init aos-animate slide-right">
         <div class="row justify-content-center items-align-center">
-            <div class="col-md-10">
+            <div class="col-md-10 sh">
                 <h1>Jakub Šarm</h1>
                 <span [innerHTML]="citat"></span>
                 <br><br>
@@ -36,7 +36,7 @@
 <section class="d-flex flex-column justify-content-center" #about id="about">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title">
+            <div class="col-md-12 text-center page-title sh">
                 <h1>O MNĚ</h1>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <img src="../../assets/me.webp" class="rounded profil-img" alt="">
             </div>
             <div class="col-md-8 aboutText">
-                <h2>
+                <h2 class="sh">
                     Web developer.
                 </h2>
                 <p>
@@ -86,7 +86,7 @@
 <section class="d-flex flex-column justify-content-center" #projekty id="projekty">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title">
+            <div class="col-md-12 text-center page-title sh">
                 <h1>Projekty</h1>
             </div>
             <div class="col-md-4">
@@ -176,7 +176,7 @@
 <section class="d-flex flex-column justify-content-center" #reference id="reference">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title">
+            <div class="col-md-12 text-center page-title sh">
                 <h1>Reference</h1>
             </div>
             <div class="col-md-12">
@@ -300,7 +300,7 @@
     </div>
 </section>
 <section class="d-flex flex-column justify-content-center" id="zaver">
-    <div class="container">
+    <div class="container sh">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center mb-3">
                 <h3>Jakub Šarm</h3>
@@ -320,7 +320,7 @@
 </section>
 
 <footer>
-    <div class="container">
+    <div class="container sh">
         <div class="row">
             <div class="col-md-12">
                 &copy; Copyright 2022 <a routerLink="/">JakubŠarm.eu</a> - Všechna práva vyhrazena. | Vytvořeno mnou s <i class="fa fa-heart text-danger"></i> a hromadou ☕.
