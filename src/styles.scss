@@ -321,20 +321,22 @@ section#zaver {
             display: inline;
             margin: 0 5px;
         }
-        .social-network a.icoLinked:hover {
-            background-color: #2867b2;
-        }
-        .social-network a.icoFacebook:hover {
-            background-color: #3b5998;
-        }
-        .social-network a.icoInstagram:hover {
-            background-color: #e1306c;
-        }
-        .social-network a.icoLinked:hover i,
-        .social-network a.icoFacebook:hover i,
-        .social-network a.icoInstagram:hover i,
-        .social-network a.icoTwitter:hover i {
-            color: #fff;
+        .social-network {
+            a.icoLinked:hover {
+                background-color: #2867b2;
+            }
+            a.icoFacebook:hover {
+                background-color: #3b5998;
+            }
+            a.icoInstagram:hover {
+                background-color: #e1306c;
+            }
+            a.icoLinked:hover i,
+            a.icoFacebook:hover i,
+            a.icoInstagram:hover i,
+            a.icoTwitter:hover i {
+                color: #fff;
+            }
         }
         a.socialIcon:hover,
         .socialHoverClass {

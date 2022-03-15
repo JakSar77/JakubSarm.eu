@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
     selector: 'jakubsarm-app',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'JakubSarm.eu';
+
+    constructor(){
+        Aos.init();
+    }
 }

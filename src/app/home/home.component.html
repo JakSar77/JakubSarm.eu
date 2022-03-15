@@ -3,7 +3,7 @@
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
-    <nav id="navbar" class="navbar nav-menu sh">
+    <nav id="navbar" class="navbar nav-menu sh"  data-aos="fade-right">
         <ul>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)" ><i class="fa fa-home"></i> <span>Domů</span></a></li>
             <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)" ><i class="fa fa-book"></i> <span>O mně</span></a></li>
@@ -17,7 +17,7 @@
 <section class="d-flex flex-column justify-content-center items-align-center" #main id="main" (scroll)="scrollHandler($event)">
     <div class="container aos-init aos-animate slide-right">
         <div class="row justify-content-center items-align-center">
-            <div class="col-md-10 sh">
+            <div class="col-md-10 sh"  data-aos="zoom-in">
                 <h1>Jakub Šarm</h1>
                 <span [innerHTML]="citat"></span>
                 <br><br>
@@ -36,15 +36,15 @@
 <section class="d-flex flex-column justify-content-center" #about id="about">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title sh">
+            <div class="col-md-12 text-center page-title sh"  data-aos="zoom-in">
                 <h1>O MNĚ</h1>
             </div>
         </div>
         <div class="row justify-content-center items-align-center">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-right">
                 <img src="../../assets/me.webp" class="rounded profil-img" alt="">
             </div>
-            <div class="col-md-8 aboutText">
+            <div class="col-md-8 aboutText"  data-aos="fade-left">
                 <h2 class="sh">
                     Web developer.
                 </h2>
@@ -86,10 +86,10 @@
 <section class="d-flex flex-column justify-content-center" #projekty id="projekty">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title sh">
+            <div class="col-md-12 text-center page-title sh"  data-aos="zoom-in">
                 <h1>Projekty</h1>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/gamerhost.pro.webp" class="card-img-top">
                     <div class="card-body">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/d-maso.webp" class="card-img-top">
                     <div class="card-body">
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/playinright.cz.webp" class="card-img-top">
                     <div class="card-body">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/demo.webp" class="card-img-top">
                     <div class="card-body">
@@ -144,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4" data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/mythia.webp" class="card-img-top">
                     <div class="card-body">
@@ -157,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 "  data-aos="fade-up">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/stoprussianweb.webp" class="card-img-top">
                     <div class="card-body">
@@ -167,6 +167,20 @@
                             Nástroj pro DoSování stránek ruské válády a dalších webů na podporu Ukrajiny. 
                         </p>
                         <a href="https://stoprussianweb.eu/" class="card-link">StopRussianWeb.eu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 "  data-aos="fade-up">
+                <div class="card mb-3">
+                    <img src="../../assets/projekty/crystalrp.webp" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CrystalRP v1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">PHP, Angular, MySQL, Design</h6>
+                        <p class="card-text">
+                            Webová aplikace pro FiveM server. S online statistikami, seznamem hráčů a adminteamem.
+                            Konfigurovatelné informace přes soubor.
+                        </p>
+                        <a href="https://crystalrp.eu/" class="card-link">CrystalRP.eu</a>
                     </div>
                 </div>
             </div>
@@ -185,15 +199,17 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/mccitron.webp" class="rounded" width="128px">
-                                    <h2>Austin "McCitron" Backo</h2>
-                                    <small class="text-muted">YouTuber a Streamer</small>
+                                    <img src="../../assets/reference/crystal.webp" class="rounded" width="128px">
+                                    <h2>Adam R.</h2>
+                                    <small class="text-muted">Management - CrystalRP.eu</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Na Jakuba je vždy spoleh. Mně osobně pokaždé skvěle poradil ohledně hostingu, hardwaru i údržby PC,<br>
-                                        přičemž nabídl vždy hned několik variant či postupů.<br>
-                                        Orientuje se v mnoha oblastech a čemu nerozumí, to si vždy zjistí, aby našel nejlepší řešení problému.<br>
-                                        A co je hlavní? Je schopen rychle a pohotově komunikovat.
+                                        Dlouho jsem hledal spolehlivého a schopného developera, který by uměl udělat web podle mých představ.<br>
+                                        Zkusil jsem napsat Jakubovi a jakmile jsem mu sdělil, co vše na webu má být, udělal mi do hodiny cenovou nabídku.<br>
+                                        Po schválení cenové nabídky se vrhnul ihned do práce.
+                                        Vzhled jsem nechal celkově na něm a nelituju toho.<br>
+                                        Ve finále byl web hotový za 12 hodin.
+                                        Maximální spokojenost a určitě doporučuji. 
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -213,6 +229,25 @@
                                         Myslím si, že je to machr na všechny věci jako je<br>
                                         PHP, HTML, CSS a dokonce i v Angluaru.
                                         Spolupráce je oboustranná.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <img src="../../assets/reference/mccitron.webp" class="rounded" width="128px">
+                                    <h2>Austin "McCitron" Backo</h2>
+                                    <small class="text-muted">YouTuber a Streamer</small>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        Na Jakuba je vždy spoleh. Mně osobně pokaždé skvěle poradil ohledně hostingu, hardwaru i údržby PC,<br>
+                                        přičemž nabídl vždy hned několik variant či postupů.<br>
+                                        Orientuje se v mnoha oblastech a čemu nerozumí, to si vždy zjistí, aby našel nejlepší řešení problému.<br>
+                                        A co je hlavní? Je schopen rychle a pohotově komunikovat.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
