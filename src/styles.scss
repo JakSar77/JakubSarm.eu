@@ -182,10 +182,14 @@ section#main {
         .social-network a.icoInstagram:hover {
             background-color: #e1306c;
         }
+        .social-network a.icoGithub:hover {
+            background-color: #6e5494;
+        }
         .social-network a.icoLinked:hover i,
         .social-network a.icoFacebook:hover i,
         .social-network a.icoInstagram:hover i,
-        .social-network a.icoTwitter:hover i {
+        .social-network a.icoTwitter:hover i ,
+        .social-network a.icoGithub:hover i {
             color: #fff;
         }
         a.socialIcon:hover,
@@ -331,10 +335,14 @@ section#zaver {
             a.icoInstagram:hover {
                 background-color: #e1306c;
             }
+            a.icoGithub:hover {
+                background-color: #6e5494;
+            }
             a.icoLinked:hover i,
             a.icoFacebook:hover i,
             a.icoInstagram:hover i,
-            a.icoTwitter:hover i {
+            a.icoTwitter:hover i ,
+            a.icoGithub:hover i {
                 color: #fff;
             }
         }
@@ -395,6 +403,24 @@ section#projekty {
     }
 }
 
+section#jazyky {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    padding-top: 1.5rem;
+    img {
+        transition: all 0.3s ease;
+    }
+    img:hover {
+        transform: scale(1.2);
+    }
+    svg {
+        transition: all 0.3s ease;
+    }
+    svg:hover {
+        transform: scale(1.2);
+    }
+}
+
 a {
     color: #c3473c;
 }
@@ -410,7 +436,7 @@ footer {
 }
 
 .sh {
-    filter: drop-shadow(5px 5px 5px #000);
+    filter: drop-shadow(0px 0px 5px rgb(34, 34, 34));
 }
 
 

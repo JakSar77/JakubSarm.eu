@@ -1,31 +1,57 @@
-
 <i class="fa fa-list mobile-nav-toggle d-xl-none" id="mobile-nav" (click)="mobileMenu()"></i>
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
-    <nav id="navbar" class="navbar nav-menu sh"  data-aos="fade-right">
+    <nav id="navbar" class="navbar nav-menu sh" data-aos="fade-right">
         <ul>
-            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)" ><i class="fa fa-home"></i> <span>Domů</span></a></li>
-            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)" ><i class="fa fa-book"></i> <span>O mně</span></a></li>
-            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === projekty}" (click)="menu(projekty)" ><i class="fas fa-briefcase"></i> <span>Projekty</span></a></li>
-            <li><a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === reference}" (click)="menu(reference)" ><i class="fa fa-users"></i> <span>Reference</span></a></li>
+            <li>
+                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)">
+                    <i class="fa fa-home"></i> <span>Domů</span>
+                </a>
+            </li>
+            <li>
+                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)">
+                    <i class="fa fa-book"></i> <span>O mně</span>
+                </a>
+            </li>
+            <li>
+                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === jazyky}" (click)="menu(jazyky)">
+                    <i class="fab fa-php"></i> <span>Jazyky</span>
+                </a>
+            </li>
+            <li>
+                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === projekty}" (click)="menu(projekty)">
+                    <i class="fas fa-briefcase"></i> <span>Projekty</span>
+                </a>
+            </li>
+            <li>
+                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === reference}"
+                    (click)="menu(reference)"><i class="fa fa-users"></i> <span>Reference</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
 </header>
 
-<section class="d-flex flex-column justify-content-center items-align-center" #main id="main" (scroll)="scrollHandler($event)">
+<section class="d-flex flex-column justify-content-center items-align-center" #main id="main"
+    (scroll)="scrollHandler($event)">
     <div class="container aos-init aos-animate slide-right">
         <div class="row justify-content-center items-align-center">
-            <div class="col-md-10 sh"  data-aos="zoom-in">
+            <div class="col-md-10 sh" data-aos="zoom-in">
                 <h1>Jakub Šarm</h1>
                 <span [innerHTML]="citat"></span>
                 <br><br>
                 <div class="socials">
                     <ul class="social-network social-circle">
-                        <li><a href="" target="_blank" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="" target="_blank" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="" target="_blank" class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://instagram.com/jakubsarm" target="_blank" class="icoInstagram"
+                                title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/jakub.sarm/" target="_blank" class="icoFacebook"
+                                title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jakub-%c5%a1arm-629b02186" target="_blank"
+                                class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/JakSar77" target="_blank" class="icoGithub" title="Github"><i
+                                    class="fab fa-github"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -36,7 +62,7 @@
 <section class="d-flex flex-column justify-content-center" #about id="about">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title sh"  data-aos="zoom-in">
+            <div class="col-md-12 text-center page-title sh" data-aos="zoom-in">
                 <h1>O MNĚ</h1>
             </div>
         </div>
@@ -44,7 +70,7 @@
             <div class="col-md-4" data-aos="fade-right">
                 <img src="../../assets/me.webp" class="rounded profil-img" alt="">
             </div>
-            <div class="col-md-8 aboutText"  data-aos="fade-left">
+            <div class="col-md-8 aboutText" data-aos="fade-left">
                 <h2 class="sh">
                     Web developer.
                 </h2>
@@ -68,7 +94,8 @@
                                 <i class="fa fa-chevron-right"></i><b>Telefon:</b> +420 775 567 240
                             </li>
                             <li>
-                                <i class="fa fa-chevron-right"></i><b>E-Mail:</b> Sarm<i class="fa fa-at" style="margin-right: 0;"></i>jakubsarm.eu
+                                <i class="fa fa-chevron-right"></i><b>E-Mail:</b> Sarm<i class="fa fa-at"
+                                    style="margin-right: 0;"></i>jakubsarm.eu
                             </li>
                             <li>
                                 <i class="fa fa-chevron-right"></i><b>Adresa:</b> Okrouhlá 35, 35002 Okrouhlá
@@ -83,18 +110,75 @@
         </div>
     </div>
 </section>
+<section class="d-flex flex-column justify-content-center" #jazyky id="jazyky">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center page-title sh" data-aos="zoom-in">
+                <h1>Programovací jazyky a nástroje</h1>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://angular.io/" target="_blank">
+                    <img src="../../assets/icons/angular.svg" width="100%" alt="Angular">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://www.php.net" target="_blank">
+                    <img src="../../assets/icons/php.svg" width="100%" alt="PHP">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://https://getbootstrap.com/" target="_blank">
+                    <img src="../../assets/icons/bootstrap.svg" width="100%" alt="Bootstrap">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://w3schools.com/css/" target="_blank">
+                    <img src="../../assets/icons/css3.svg" width="100%" alt="CSS3">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://www.w3.org/html/" target="_blank">
+                    <img src="../../assets/icons/html5.svg" width="100%" alt="HTML5">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src="../../assets/icons/javascript.svg" width="100%" alt="JavaScript">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://www.photoshop.com/en" target="_blank">
+                    <img src="../../assets/icons/photoshop.svg" width="100%" alt="Photoshop">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://www.typescriptlang.org/" target="_blank">
+                    <img src="../../assets/icons/typescript.svg" width="100%" alt="TypeScript">
+                </a>
+            </div>
+            <div class="col-1 col-md-1">
+                <a href="https://github.com/JakSar77" target="_blank">
+                    <svg width="100%" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="d-flex flex-column justify-content-center" #projekty id="projekty">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 text-center page-title sh"  data-aos="zoom-in">
+            <div class="col-md-12 text-center page-title sh" data-aos="zoom-in">
                 <h1>Projekty</h1>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
+            <div class="col-md-4">
                 <div class="card mb-3">
                     <img src="../../assets/projekty/gamerhost.pro.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">GamerHost s.r.o.</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">PHP, Angular TS, MySQL, <small>HTML, SCSS, JS</small>, Bash</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">PHP, Angular TS, MySQL, <small>HTML, SCSS, JS</small>,
+                            Bash</h6>
                         <p class="card-text">
                             Webová administrace pro nákup serverů a správu uživatelských účtů.
                             Ticket systém na webu, VIP Systém pro nákup VIP ranků na servery.
@@ -105,8 +189,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/d-maso.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">D-Maso s.r.o.</h5>
@@ -118,21 +202,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/playinright.cz.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">PlayInRight.cz</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, Angular TS, MySQL</h6>
                         <p class="card-text">
-                            Webová stránka s informacemi o minecraft serveru a vlastním banlist systémem. Web je zaměřený spíše na design.
+                            Webová stránka s informacemi o minecraft serveru a vlastním banlist systémem. Web je
+                            zaměřený spíše na design.
                         </p>
                         <a href="https://www.playinright.cz/" class="card-link">PlayInRight.cz</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/demo.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">WP Hosting s.r.o.</h5>
@@ -144,34 +229,35 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/mythia.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">MythiaProject</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, CSS, JS, MySQL</h6>
                         <p class="card-text">
-                            Webový template pro herní portál MythiaProject. Vlastní banlist, zobrazování VIP výhod, seznam serverů atd...
+                            Webový template pro herní portál MythiaProject. Vlastní banlist, zobrazování VIP výhod,
+                            seznam serverů atd...
                         </p>
                         <a href="https://mythiaproject.eu/" class="card-link">MythiaProject.eu</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 "  data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/stoprussianweb.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Russia DoS</h5>
                         <h6 class="card-subtitle mb-2 text-muted">HTML, CSS, JavaScript</h6>
                         <p class="card-text">
-                            Nástroj pro DoSování stránek ruské válády a dalších webů na podporu Ukrajiny. 
+                            Nástroj pro DoSování stránek ruské válády a dalších webů na podporu Ukrajiny.
                         </p>
                         <a href="https://stoprussianweb.eu/" class="card-link">StopRussianWeb.eu</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 "  data-aos="fade-up">
-                <div class="card mb-3">
+            <div class="col-md-4 ">
+                <div class="card mb-3" data-aos="fade-up">
                     <img src="../../assets/projekty/crystalrp.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">CrystalRP v1</h5>
@@ -204,12 +290,14 @@
                                     <small class="text-muted">Management - CrystalRP.eu</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Dlouho jsem hledal spolehlivého a schopného developera, který by uměl udělat web podle mých představ.<br>
-                                        Zkusil jsem napsat Jakubovi a jakmile jsem mu sdělil, co vše na webu má být, udělal mi do hodiny cenovou nabídku.<br>
+                                        Dlouho jsem hledal spolehlivého a schopného developera, který by uměl udělat web
+                                        podle mých představ.<br>
+                                        Zkusil jsem napsat Jakubovi a jakmile jsem mu sdělil, co vše na webu má být,
+                                        udělal mi do hodiny cenovou nabídku.<br>
                                         Po schválení cenové nabídky se vrhnul ihned do práce.
                                         Vzhled jsem nechal celkově na něm a nelituju toho.<br>
                                         Ve finále byl web hotový za 12 hodin.
-                                        Maximální spokojenost a určitě doporučuji. 
+                                        Maximální spokojenost a určitě doporučuji.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -244,9 +332,11 @@
                                     <small class="text-muted">YouTuber a Streamer</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Na Jakuba je vždy spoleh. Mně osobně pokaždé skvěle poradil ohledně hostingu, hardwaru i údržby PC,<br>
+                                        Na Jakuba je vždy spoleh. Mně osobně pokaždé skvěle poradil ohledně hostingu,
+                                        hardwaru i údržby PC,<br>
                                         přičemž nabídl vždy hned několik variant či postupů.<br>
-                                        Orientuje se v mnoha oblastech a čemu nerozumí, to si vždy zjistí, aby našel nejlepší řešení problému.<br>
+                                        Orientuje se v mnoha oblastech a čemu nerozumí, to si vždy zjistí, aby našel
+                                        nejlepší řešení problému.<br>
                                         A co je hlavní? Je schopen rychle a pohotově komunikovat.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
@@ -263,10 +353,14 @@
                                     <small class="text-muted">Zákaznice</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Jakub je neuvěřitelně nadaný člověk, obětavý workoholik, je s ním radost spolupracovat<br>
-                                        a občas udělá cokoliv, aby dosáhl svého cíle. Moc dobře ví, co dělá a kdyby se náhodou<br>
-                                        někde vyskytla chyba, opraví jí okamžitě. Zvládá dobře kritiku a je ochoten uznat,<br>
-                                        že má někdo fajn nápad a zařídit se podle toho. U Kuby jste vždy v dobrých rukou.
+                                        Jakub je neuvěřitelně nadaný člověk, obětavý workoholik, je s ním radost
+                                        spolupracovat<br>
+                                        a občas udělá cokoliv, aby dosáhl svého cíle. Moc dobře ví, co dělá a kdyby se
+                                        náhodou<br>
+                                        někde vyskytla chyba, opraví jí okamžitě. Zvládá dobře kritiku a je ochoten
+                                        uznat,<br>
+                                        že má někdo fajn nápad a zařídit se podle toho. U Kuby jste vždy v dobrých
+                                        rukou.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -282,7 +376,8 @@
                                     <small class="text-muted">Zakladatel serveru - KastrolCraft.cz</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        S Kubou spolupracuji již několik let. Své první projekty jsem začínal s ním a vždy mi pomohl s čím bylo potřeba.<br>
+                                        S Kubou spolupracuji již několik let. Své první projekty jsem začínal s ním a
+                                        vždy mi pomohl s čím bylo potřeba.<br>
                                         Grafické práce zvládá na jedničku a tvorbu webů taktéž.
                                         Za ceny které má nabízí až nadstandardní služby.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -300,7 +395,8 @@
                                     <small class="text-muted">Zákazník - D-Maso s.r.o.</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Jakub má pod palcem. Je to přímý chlapík který vám nenaúčtuje jen tak za něco.<br>
+                                        Jakub má pod palcem. Je to přímý chlapík který vám nenaúčtuje jen tak za
+                                        něco.<br>
                                         Dodá vám skvělý přehled změn, cenu i nadstandartní výsledek.
                                         S jeho rychlou odezvou ke klientům je to vždy první volba.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -318,13 +414,17 @@
                                     <small class="text-muted">Java Developer - Customer Support</small>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Jakuba poznám z projektu GamerHost.pro, je to človek na veľmi profesionálnej úrovni.<br>
-                                        Pre GamerHost.pro ako projekt naprogramoval dosť veľa vecí, ako napríklad VIP Systém, taktiež upravoval hlavnú stránku a<br>
-                                        oveľa viac vecí, ktoré mi na prvý pohľad vyrazili dych, bol som šťastný, že niekoho takého môžeme mať v našom Tíme!<br>
-                                        Taktiež s ním rád komunikujem a občas spolupracujem. Ak hľadáte odborníka na "webovky", jednoznačne je to tento človek.<br>
+                                        Jakuba poznám z projektu GamerHost.pro, je to človek na veľmi profesionálnej
+                                        úrovni.<br>
+                                        Pre GamerHost.pro ako projekt naprogramoval dosť veľa vecí, ako napríklad VIP
+                                        Systém, taktiež upravoval hlavnú stránku a<br>
+                                        oveľa viac vecí, ktoré mi na prvý pohľad vyrazili dych, bol som šťastný, že
+                                        niekoho takého môžeme mať v našom Tíme!<br>
+                                        Taktiež s ním rád komunikujem a občas spolupracujem. Ak hľadáte odborníka na
+                                        "webovky", jednoznačne je to tento človek.<br>
                                         Naskytne sa niekde nejaká chyba?! Jakub tú chybu vyrieši!
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                     </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -344,9 +444,14 @@
                 </p>
                 <div class="socials mb-3">
                     <ul class="social-network social-circle mb-3">
-                        <li><a href="" target="_blank" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="" target="_blank" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="" target="_blank" class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://instagram.com/jakubsarm" target="_blank" class="icoInstagram"
+                                title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/jakub.sarm/" target="_blank" class="icoFacebook"
+                                title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jakub-%c5%a1arm-629b02186" target="_blank"
+                                class="icoLinked" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/JakSar77" target="_blank" class="icoGithub" title="Github"><i
+                                    class="fab fa-github"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -358,7 +463,8 @@
     <div class="container sh">
         <div class="row">
             <div class="col-md-12">
-                &copy; Copyright 2022 <a routerLink="/">JakubŠarm.eu</a> - Všechna práva vyhrazena. | Vytvořeno mnou s <i class="fa fa-heart text-danger"></i> a hromadou ☕.
+                &copy; Copyright 2022 <a routerLink="/">JakubŠarm.eu</a> - Všechna práva vyhrazena. | Vytvořeno mnou s
+                <i class="fa fa-heart text-danger"></i> a hromadou ☕.
             </div>
         </div>
     </div>
