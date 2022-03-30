@@ -2,30 +2,30 @@
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
-    <nav id="navbar" class="navbar nav-menu sh" data-aos="fade-right">
+    <nav id="navbar" class="navbar nav-menu" data-aos="fade-right">
         <ul>
             <li>
-                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)">
+                <a [href]="" class="nav-link scrollto d-flex justify-content-center" [ngClass]="{'active': mLink === main || mLink === 'main'}" (click)="menu(main)">
                     <i class="fa fa-home"></i> <span>Domů</span>
                 </a>
             </li>
             <li>
-                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === about}" (click)="menu(about)">
+                <a [href]="" class="nav-link scrollto d-flex justify-content-center" [ngClass]="{'active': mLink === about}" (click)="menu(about)">
                     <i class="fa fa-book"></i> <span>O mně</span>
                 </a>
             </li>
             <li>
-                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === jazyky}" (click)="menu(jazyky)">
-                    <i class="fab fa-php"></i> <span>Jazyky</span>
+                <a [href]="" class="nav-link scrollto d-flex justify-content-center" [ngClass]="{'active': mLink === jazyky}" (click)="menu(jazyky)">
+                    <i class="fas fa-laptop"></i> <span>Jazyky</span>
                 </a>
             </li>
             <li>
-                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === projekty}" (click)="menu(projekty)">
+                <a [href]="" class="nav-link scrollto d-flex justify-content-center" [ngClass]="{'active': mLink === projekty}" (click)="menu(projekty)">
                     <i class="fas fa-briefcase"></i> <span>Projekty</span>
                 </a>
             </li>
             <li>
-                <a [href]="" class="nav-link scrollto" [ngClass]="{'active': mLink === reference}"
+                <a [href]="" class="nav-link scrollto d-flex justify-content-center" [ngClass]="{'active': mLink === reference}"
                     (click)="menu(reference)"><i class="fa fa-users"></i> <span>Reference</span>
                 </a>
             </li>
@@ -38,7 +38,7 @@
     (scroll)="scrollHandler($event)">
     <div class="container aos-init aos-animate slide-right">
         <div class="row justify-content-center items-align-center">
-            <div class="col-md-10 sh" data-aos="zoom-in">
+            <div class="col-md-12 sh" data-aos="zoom-in">
                 <h1>Jakub Šarm</h1>
                 <span [innerHTML]="citat"></span>
                 <br><br>
@@ -81,7 +81,7 @@
                     Ovládám PHP, JavaScript, jQuery, a práci s MySQL databázemi.<br>
                     <br>
                     <em>
-                        Nejradši pracuji na administračních systémech v jazyku PHP + JavaScript (jQuery).
+                        Nejradši programuji administrační systémy v jazyku PHP + JavaScript (jQuery).
                     </em>
                 </p>
                 <div class="row">
@@ -173,7 +173,7 @@
                 <h1>Projekty</h1>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/gamerhost.pro.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">GamerHost s.r.o.</h5>
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/d-maso.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">D-Maso s.r.o.</h5>
@@ -203,7 +203,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/playinright.cz.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">PlayInRight.cz</h5>
@@ -217,7 +217,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/demo.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">WP Hosting s.r.o.</h5>
@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/mythia.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">MythiaProject</h5>
@@ -244,7 +244,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/stoprussianweb.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Russia DoS</h5>
@@ -257,7 +257,7 @@
                 </div>
             </div>
             <div class="col-md-4 ">
-                <div class="card mb-3" data-aos="fade-up">
+                <div class="card" data-aos="fade-up">
                     <img src="../../assets/projekty/crystalrp.webp" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">CrystalRP v1</h5>
@@ -285,7 +285,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/crystal.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/crystal.webp" class="rounded" width="128px" height="128px">
                                     <h2>Adam R.</h2>
                                     <small class="text-muted">Management - CrystalRP.eu</small>
                                     <p>
@@ -308,7 +308,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/kyvala.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/kyvala.webp" class="rounded" width="128px" height="128px">
                                     <h2>Petr Kývala</h2>
                                     <small class="text-muted">Freelancer - Linux administrátor</small>
                                     <p>
@@ -327,7 +327,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/mccitron.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/mccitron.webp" class="rounded" width="128px" height="128px">
                                     <h2>Austin "McCitron" Backo</h2>
                                     <small class="text-muted">YouTuber a Streamer</small>
                                     <p>
@@ -348,7 +348,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/bara.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/bara.webp" class="rounded" width="128px" height="128px">
                                     <h2>Barbora S.</h2>
                                     <small class="text-muted">Zákaznice</small>
                                     <p>
@@ -371,7 +371,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/kastrol.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/kastrol.webp" class="rounded" width="128px" height="128px">
                                     <h2>Matouš Marek</h2>
                                     <small class="text-muted">Zakladatel serveru - KastrolCraft.cz</small>
                                     <p>
@@ -390,7 +390,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/dohnalek.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/dohnalek.webp" class="rounded" width="128px" height="128px">
                                     <h2>Michal Dohnálek</h2>
                                     <small class="text-muted">Zákazník - D-Maso s.r.o.</small>
                                     <p>
@@ -409,7 +409,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/ado.webp" class="rounded" width="128px">
+                                    <img src="../../assets/reference/ado.webp" class="rounded" width="128px" height="128px">
                                     <h2>Adrián "Ado" Janočko</h2>
                                     <small class="text-muted">Java Developer - Customer Support</small>
                                     <p>
@@ -463,7 +463,7 @@
     <div class="container sh">
         <div class="row">
             <div class="col-md-12">
-                &copy; Copyright 2022 <a routerLink="/">JakubŠarm.eu</a> - Všechna práva vyhrazena. | Vytvořeno mnou s
+                &copy; Copyright 2022 <a routerLink="/">JakubŠarm.eu</a> - Všechna práva vyhrazena. | Vytvořeno s
                 <i class="fa fa-heart text-danger"></i> a hromadou ☕.
             </div>
         </div>
