@@ -68,7 +68,8 @@
         </div>
         <div class="row justify-content-center items-align-center">
             <div class="col-md-4" data-aos="fade-right" data-aos-offset="0">
-                <img src="../../assets/me.webp" class="rounded profil-img" alt="">
+                <img src="../../assets/l_g_profile.webp"    *ngIf="!img_loaded" class="rounded profil-img" alt="">
+                <img src="../../assets/me.webp"             *ngIf="img_loaded" class="rounded profil-img" alt="">
             </div>
             <div class="col-md-8 aboutText" data-aos="fade-left" data-aos-offset="0">
                 <h2 class="sh">
@@ -174,7 +175,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/gamerhost.pro.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/gamerhost.pro.webp"  *ngIf="img_loaded"  class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">GamerHost s.r.o.</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, Angular TS, MySQL, <small>HTML, SCSS, JS</small>,
@@ -191,7 +193,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/d-maso.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/d-maso.webp"  *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">D-Maso s.r.o.</h5>
                         <h6 class="card-subtitle mb-2 text-muted">HTML, CSS, JS</h6>
@@ -204,7 +207,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/playinright.cz.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp" *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/playinright.cz.webp"  *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">PlayInRight.cz</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, Angular TS, MySQL</h6>
@@ -218,7 +222,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/demo.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/demo.webp" *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">WP Hosting s.r.o.</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, JS, MySQL</h6>
@@ -231,7 +236,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/mythia.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/mythia.webp" *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">MythiaProject</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, CSS, JS, MySQL</h6>
@@ -245,7 +251,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/stoprussianweb.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/stoprussianweb.webp" *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Russia DoS</h5>
                         <h6 class="card-subtitle mb-2 text-muted">HTML, CSS, JavaScript</h6>
@@ -258,7 +265,8 @@
             </div>
             <div class="col-md-4 ">
                 <div class="card" data-aos="fade-up">
-                    <img src="../../assets/projekty/crystalrp.webp" class="card-img-top">
+                    <img src="../../assets/l_g_services.webp"  *ngIf="!img_loaded"  class="card-img-top">
+                    <img src="../../assets/projekty/crystalrp.webp" *ngIf="img_loaded" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">CrystalRP v1</h5>
                         <h6 class="card-subtitle mb-2 text-muted">PHP, Angular, MySQL, Design</h6>
@@ -285,7 +293,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/crystal.webp" class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/reference/crystal.webp" *ngIf="img_loaded" class="rounded" width="128px" height="128px">
                                     <h2>Adam R.</h2>
                                     <small class="text-muted">Management - CrystalRP.eu</small>
                                     <p>
@@ -308,7 +317,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/kyvala.webp" class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/reference/kyvala.webp" *ngIf="img_loaded" class="rounded" width="128px" height="128px">
                                     <h2>Petr Kývala</h2>
                                     <small class="text-muted">Freelancer - Linux administrátor</small>
                                     <p>
@@ -327,7 +337,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/mccitron.webp" class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/reference/mccitron.webp" *ngIf="img_loaded" class="rounded" width="128px" height="128px">
                                     <h2>Austin "McCitron" Backo</h2>
                                     <small class="text-muted">YouTuber a Streamer</small>
                                     <p>
@@ -348,7 +359,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/bara.webp" class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/reference/bara.webp" *ngIf="img_loaded" class="rounded" width="128px" height="128px">
                                     <h2>Barbora S.</h2>
                                     <small class="text-muted">Zákaznice</small>
                                     <p>
@@ -371,7 +383,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="../../assets/reference/kastrol.webp" class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/l_g_users.webp" *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
+                                    <img src="../../assets/reference/kastrol.webp" *ngIf="img_loaded" class="rounded" width="128px" height="128px">
                                     <h2>Matouš Marek</h2>
                                     <small class="text-muted">Zakladatel serveru - KastrolCraft.cz</small>
                                     <p>
@@ -390,6 +403,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
                                     <img src="../../assets/reference/dohnalek.webp" class="rounded" width="128px" height="128px">
                                     <h2>Michal Dohnálek</h2>
                                     <small class="text-muted">Zákazník - D-Maso s.r.o.</small>
@@ -409,6 +423,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 text-center">
+                                    <img src="../../assets/l_g_users.webp"  *ngIf="!img_loaded"  class="rounded" width="128px" height="128px">
                                     <img src="../../assets/reference/ado.webp" class="rounded" width="128px" height="128px">
                                     <h2>Adrián "Ado" Janočko</h2>
                                     <small class="text-muted">Java Developer - Customer Support</small>

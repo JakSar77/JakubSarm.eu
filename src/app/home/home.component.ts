@@ -27,24 +27,30 @@ export class HomeComponent implements OnInit {
         'Dobrý návrh: hodnota roste rychleji než náklady.',
     ];
 
+    public img_loaded: boolean  = false;
+
     constructor() {
         this.citat = this.citaty[Math.floor(Math.random() * this.citaty.length)];
     }
 
     ngOnInit(): void {
-        window.onblur = function () {
-            document.title = 'Nezapomněli jste na mě? | Jakub Šarm';
+        setTimeout(() => {
+            this.img_loaded     = true;
+            clearTimeout();
+        }, 1000);
+        window.onblur   = function () {
+            document.title  = 'Nezapomněli jste na mě? | Jakub Šarm';
         };
-        window.onfocus = function () {
-            document.title = 'Jakub Šarm - Programátor';
+        window.onfocus  = function () {
+            document.title  = 'Jakub Šarm - Programátor';
         };
         
         $(window).scroll(() => {
-            var winHeight = $(window).height();
-            var scrollTop = $(window).scrollTop();
+            var winHeight       = $(window).height();
+            var scrollTop       = $(window).scrollTop();
             
-            var elemHeight = $("#main").height();
-            var elementTop = $("#main").position().top; 
+            var elemHeight      = $("#main").height();
+            var elementTop      = $("#main").position().top; 
              
             if (elementTop < scrollTop + winHeight && scrollTop < elementTop + elemHeight)
                 $("nav-link").addclass("active");
