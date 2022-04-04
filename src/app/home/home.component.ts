@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     constructor() {
         this.citat = this.citaty[Math.floor(Math.random() * this.citaty.length)];
     }
-
+ 
     ngOnInit(): void {
         setTimeout(() => {
             this.img_loaded     = true;
